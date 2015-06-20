@@ -23,11 +23,17 @@ gem 'jbuilder', '~> 2.0'
 # bundle exec rake doc:rails generates the API under doc/api.
 gem 'sdoc', '~> 0.4.0', group: :doc
 
+# OmniAuth for facebook login
 gem 'omniauth-facebook'
+# OmniAuth for twitter login
 gem 'omniauth-twitter'
+# Boostrap style framework
 gem 'bootstrap-sass'
+# Allow turbolinks to work with jQuery easier
 gem 'jquery-turbolinks'
+# Real-time push server for rails
 gem 'faye-rails', '~> 2.0'
+# Webserver that replaces WEBrick
 gem 'thin'
 
 group :development, :test do
