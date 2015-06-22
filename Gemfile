@@ -49,6 +49,7 @@ group :development, :test do
 end
 
 group :production do
-  # PostgreSQL database for Heroku
+  # PostgreSQL database and rails_12factor for Heroku
   gem 'pg'
+  gem 'rails_12factor'
 end
