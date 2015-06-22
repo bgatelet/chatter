@@ -25,8 +25,8 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 
 # OmniAuth for facebook login
 gem 'omniauth-facebook'
-# OmniAuth for twitter login
-gem 'omniauth-twitter'
+# OmniAuth for gmail login
+gem 'omniauth-google-oauth2'
 # Boostrap style framework
 gem 'bootstrap-sass'
 # Allow turbolinks to work with jQuery easier
