@@ -5,15 +5,21 @@ class CommentsController < ApplicationController
   end
 
   def create
-    if current_user
-      @comment = current_user.comments.build(comment_params)
-      if @comment.save
-        flash[:success] = "Your comment was successfully saved."
+    respond_to do |format|
+      if current_user
+        @comment = current_user.comments.build(comment_params)
+        if @comment.save
+          flash[:success] = "Your comment was successfully saved."
+        else
+          flash[:error] = "Your comment wasn't saved."
+        end
+        format.html { redirect_to root_url }
+        format.js
       else
-        flash[:error] = "Your comment wasn't saved."
+        format.html { redirect_to root_url }
+        format.js { render nothing: true}
       end
     end
-    redirect_to root_url
   end
 
 
