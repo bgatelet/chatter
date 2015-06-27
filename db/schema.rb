@@ -26,10 +26,10 @@ ActiveRecord::Schema.define(version: 20150623004943) do
     t.string   "name"
     t.string   "avatar_url"
     t.string   "provider"
-    t.string   "provider_url"
+    t.string   "profile_url"
     t.string   "uid"
-    t.datetime "created_at",   null: false
-    t.datetime "updated_at",   null: false
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
   end
 
   add_index "users", ["provider"], name: "index_users_on_provider"

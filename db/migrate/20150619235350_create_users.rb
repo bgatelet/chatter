@@ -4,7 +4,7 @@ class CreateUsers < ActiveRecord::Migration
       t.string :name
       t.string :avatar_url
       t.string :provider
-      t.string :provider_url
+      t.string :profile_url
       t.string :uid
 
       t.timestamps null: false
