@@ -15,5 +15,4 @@
 //= require bootstrap
 //= require jquery.turbolinks
 //= require turbolinks
-//= require faye
 //= require_tree .
