@@ -1,7 +1,7 @@
 class CommentsController < ApplicationController
 
   def index
-    @comments = Comments.where('id > ?', params[:after_id].to_i).order('created_at DESC')
+    @comments = Comment.where('id > ?', params[:after_id].to_i).order('created_at DESC')
   end
 
   def new
