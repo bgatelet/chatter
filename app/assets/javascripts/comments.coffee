@@ -8,12 +8,6 @@ client.addExtension {
 }
 
 jQuery ->
-  try
-    client.unsubscribe '/comments'
-  catch
-    console?.log "Can't unsubscribe."
-  end
-  
   client.subscribe '/comments', (payload) ->
     $('#comments').find('.media-list').prepend(payload.message) if payload.message
 
