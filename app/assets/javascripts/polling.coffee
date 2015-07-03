@@ -6,9 +6,9 @@ window.Poller = {
       this.pollTimeout = setTimeout ->
         Poller.request()
       , timeout || 5000
-  clear: -> clear.Timeout(this.pollTimeout)
+  clear: -> clearTimeout(this.pollTimeout)
   request: ->
-    first_id = $('.comment').first().date('id')
+    first_id = $('.comment').first().data('id')
     $.get('/comments', after_id: first_id)
 }
 
