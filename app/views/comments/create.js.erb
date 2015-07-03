@@ -2,7 +2,7 @@ publisher = client.publish('/comments', {
   message: '<%= j render @comment %>'
 });
 
-pubisher.callback(function() {
+publisher.callback(function() {
   $('#comment_body').val('');
   $('#new_comment').find("input[type='submit']").val('Submit').prop('disabled', false)
 });
