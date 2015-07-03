@@ -1,11 +1,4 @@
-window.client = new Faye.Client('/bayeux')
-
-client.addExtension {
-  outgoing: (message, callback) ->
-    message.ext = message.ext || {}
-    message.ext.csrfToken = $('meta[name=csrf-token]').attr('content')
-    callback(message)
-}
+window.client = new Faye.Client('/faye')
 
 jQuery ->
   client.subscribe '/comments', (payload) ->
