@@ -9,9 +9,9 @@ class CommentsController < ApplicationController
       if current_user
         @comment = current_user.comments.build(comment_params)
         if @comment.save
-          flash[:success] = "Your comment was successfully saved."
+          flash.now[:success] = "Your comment was successfully saved."
         else
-          flash[:error] = "Your comment wasn't saved."
+          flash.now[:error] = "Your comment wasn't saved."
         end
         format.html { redirect_to root_url }
         format.js
